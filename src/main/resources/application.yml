@@ -2,8 +2,10 @@ rabbitmqapi:
   url: http://10.92.103.47:15672
   basicauthentication:
     username: admin
-    password: password
-
+    password: ENC(cwsGn0yePNHTGAQBItxNnCyPzH2qmO4S)
+jasypt:
+  encryptor:
+    password: pwkey
 
 
 

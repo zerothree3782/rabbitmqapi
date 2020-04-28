@@ -20,6 +20,7 @@ public class RabbitService {
     @Value("${rabbitmqapi.url}")
     private String url;
 
+    //계정생성API호출
     public String addAccount(String username, String password, String tags){
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -32,6 +33,7 @@ public class RabbitService {
         return response.toString();
     }
 
+    //vhost 권한추가 API호출
     public String addVhostPermission(String username){
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -45,6 +47,7 @@ public class RabbitService {
         return response.toString();
     }
 
+    //topic권한 추가 API호출
     public String addTopicPermission(String username) throws UnsupportedEncodingException {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);

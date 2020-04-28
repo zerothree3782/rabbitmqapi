@@ -21,7 +21,7 @@ public class RestTemplateConfig {
                 .requestFactory(() -> new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()))
                 .setConnectTimeout(Duration.ofMillis(5000)) // connection-timeout
                 .setReadTimeout(Duration.ofMillis(5000)) // read-timeout
-                .basicAuthentication(username,password)
+                .basicAuthentication(username,password) // RabbitMQ 관리자 계정
                 .build();
 
         DefaultUriTemplateHandler defaultUriTemplateHandler = new DefaultUriTemplateHandler();
